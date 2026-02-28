@@ -10,7 +10,7 @@ player = [list(map(int, input().split())) for _ in range(N)]
 
 starts = list(combinations(A, N//2))
 
-result = 101
+result = 200000000
 for idx in range(len(starts) // 2):
   link = []
   
