@@ -7,9 +7,9 @@ dp[scv[0]][scv[1]][scv[2]] = 1
 
 possible = [(9, 3, 1), (9, 1, 3), (3, 9, 1), (3, 1, 9), (1, 9, 3), (1, 3, 9)]
 
-for i in range(60, -1, -1):
-  for j in range(60, -1, -1):
-    for k in range(60, -1, -1):
+for i in range(scv[0], -1, -1):
+  for j in range(scv[1], -1, -1):
+    for k in range(scv[2], -1, -1):
       if dp[i][j][k] > 0:
         for p in possible:
           tmp_i = i - p[0] if i-p[0] >= 0 else 0
