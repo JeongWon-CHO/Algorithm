@@ -2,7 +2,7 @@ N = int(input())
 scv = list(map(int, input().split()))
 scv += [0] * (3 - len(scv))
 
-dp = [[[0] * 61 for i in range(61)] for j in range(61)]
+dp = [[[0] * (scv[2] + 1) for _ in range(scv[1] + 1)] for _ in range(scv[0] + 1)]
 dp[scv[0]][scv[1]][scv[2]] = 1
 
 possible = [(9, 3, 1), (9, 1, 3), (3, 9, 1), (3, 1, 9), (1, 9, 3), (1, 3, 9)]
